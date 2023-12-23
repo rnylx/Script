@@ -1,2 +1,4 @@
 payload:
   - DOMAIN-SUFFIX,bt-tt.com
+  - PROCESS-NAME,VirtualDesktop.Streamer.exe
+  - PROCESS-NAME,VirtualDesktop.Streamer
