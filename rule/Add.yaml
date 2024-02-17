@@ -2,3 +2,6 @@ payload:
   - DOMAIN-SUFFIX,matters.news
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
   - DOMAIN-SUFFIX,services.googleapis.cn
+  - PROCESS-NAME,VirtualDesktop.Streamer.exe 
+  - DOMAIN-SUFFIX,vrmoo.net
+  - DOMAIN-SUFFIX,3ppp.top
