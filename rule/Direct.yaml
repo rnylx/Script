@@ -2,3 +2,6 @@ payload:
   - DOMAIN-SUFFIX,bt-tt.com
   - PROCESS-NAME,VirtualDesktop.Streamer.exe
   - PROCESS-NAME,VirtualDesktop.Streamer
+  - DOMAIN-SUFFIX,vrmoo.net,DIREC
+  - DOMAIN-SUFFIX,3ppp.top,DIRECT
+  
