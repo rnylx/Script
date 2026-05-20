@@ -1,9 +1,3 @@
-#---------------------------------------------------#
-## 更新：2026-05-20 09:14:58
-## 感谢：https://github.com/Hackl0us/SS-Rule-Snippet
-## 链接：https://link.oness.xyz/link/qHF9QOD0bYjbi8w4?clash=3
-#---------------------------------------------------#
-
 # HTTP 代理端口
 port: 7890
 # SOCKS5 代理端口
