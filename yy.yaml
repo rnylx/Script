@@ -1,46 +1,25 @@
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-allow-lan: false
-unified-delay: true
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
 mode: rule
 log-level: info
-ipv6: false
-external-controller: 0.0.0.0:9090
-clash-for-android:
-  append-system-dns: false
-profile:
-  tracing: true
-experimental:
-  sniff-tls-sni: true
+external-controller: '127.0.0.1:9090'
 dns:
-  enable: true
-  ipv6: false
-  listen: 0.0.0.0:53
-  fake-ip-filter:
-    - "*.lan"
-    - "*.srv.nintendo.net"
-    - "*.stun.playstation.net"
-    - xbox.*.microsoft.com
-    - "*.xboxlive.com"
-    - "*.teafone.com"
-    - "*.sktswe.net"
-    - rtc.goodfone.co.kr
-    - "*.chattti.com"
-  nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
-    - tls://223.5.5.5:853
-    - tls://223.6.6.6:853
-    - tls://120.53.53.53
-    - tls://1.12.12.12
+    enable: false
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
+    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-  - {name: "🇭🇰 日用香港[0.2]", server: a1973dd7-a509.114837322.xyz, port: 34567, type: anytls, password: 928da27714, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
-  - {name: "🇸🇬 日用狮城[0.2]", server: a1973dd7-a509.114837322.xyz, port: 34567, type: anytls, password: 928da27714, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
-  - {name: "🇯🇵 日用日本[0.2]", server: a1973dd7-a509.114837322.xyz, port: 34567, type: anytls, password: 928da27714, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
-  - {name: "🇺🇸 日用美国[0.2]", server: a1973dd7-a509.114837322.xyz, port: 34567, type: anytls, password: 928da27714, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK测试0.01x不保证可用性, server: 17fd48f0-486c-11f1.00991169.xyz, port: 34567, type: anytls, password: 928da27714, sni: mpvideo.qpic.cn, skip-cert-verify: true, udp: true}
+  - {name: "🇭🇰 日用香港[0.2], server: aexgzbgp01.114837322.xyz, port: 34567, type: trojan, password: FDC7A4BF-799C-AF35-F2EC-017D3B286C85, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 日用狮城[0.2], server: aexgzbgp01.114837322.xyz, port: 34567, type: trojan, password: FDC7A4BF-799C-AF35-F2EC-017D3B286C85, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 日用日本[0.2], server: aexgzbgp01.114837322.xyz, port: 34567, type: trojan, password: FDC7A4BF-799C-AF35-F2EC-017D3B286C85, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 日用美国[0.2], server: aexgzbgp01.114837322.xyz, port: 34567, type: trojan, password: FDC7A4BF-799C-AF35-F2EC-017D3B286C85, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK测试0.01x不保证可用性, server: aexgzbgp01.114837322.xyz, port: 34567, type: trojan, password: FDC7A4BF-799C-AF35-F2EC-017D3B286C85, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
   - {name: 🇭🇰 高级 专线 香港 01, server: aexgzbgp01.114837322.xyz, port: 34567, type: trojan, password: FDC7A4BF-799C-AF35-F2EC-017D3B286C85, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
   - {name: 🇭🇰 高级 专线 香港 02, server: aexgzbgp01.114837322.xyz, port: 34567, type: trojan, password: FDC7A4BF-799C-AF35-F2EC-017D3B286C85, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
   - {name: 🇭🇰 高级 专线 香港 03, server: aexgzbgp01.114837322.xyz, port: 34567, type: trojan, password: FDC7A4BF-799C-AF35-F2EC-017D3B286C85, sni: teambition-file.oss-cn-zhangjiakou.aliyuncs.com, skip-cert-verify: true, udp: true}
